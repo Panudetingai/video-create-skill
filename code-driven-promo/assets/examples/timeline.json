@@ -1,0 +1,70 @@
+{
+  "title": "Mali Cowork Promo — CoworkBot Edition",
+  "duration": 90,
+  "bpm": 120,
+  "size": [1920, 1080],
+  "scenes": [
+    {
+      "id": "s01", "name": "Hook", "start": 0, "end": 7, "bots": ["mochi"],
+      "th": { "vo": "งานล้นมือใช่ไหม? ไฟล์รก โค้ดพัง อีเมลค้าง...", "text": ["งานล้น?", "ให้ทีมช่วยไหม?"] },
+      "en": { "vo": "Drowning in files? Bugs, docs, emails piling up?", "text": ["Overwhelmed?", "Meet your team."] }
+    },
+    {
+      "id": "s02", "name": "Hero", "start": 7, "end": 15, "bots": ["mochi", "jelly", "petal", "nori", "sora", "momo"],
+      "th": { "vo": "เจอแล้ว มาลี โคเวิร์ค AI ที่รันบนเครื่องของคุณ ไม่ใช่เซิร์ฟเวอร์ใคร", "text": ["Mali Cowork", "AI ที่รันบนเครื่องคุณ"] },
+      "en": { "vo": "Meet Mali Cowork. AI that runs on your machine. Not someone else's server.", "text": ["Mali Cowork", "AI that runs on your machine"] }
+    },
+    {
+      "id": "s03", "name": "Modes", "start": 15, "end": 23, "bots": ["sora", "petal", "nori"],
+      "th": { "vo": "แชทถาม, โคเวิร์คสั่งแก้ไฟล์จริง, โค้ดโหมดลุยโค้ด", "text": ["Chat / Cowork / Code", "เลือกโหมดชัด สิทธิ์ชัด"] },
+      "en": { "vo": "Chat to ask, Cowork to edit real files, Code to ship.", "text": ["Chat / Cowork / Code", "Pick a mode. Clear permissions."] }
+    },
+    {
+      "id": "s04", "name": "Models", "start": 23, "end": 31, "bots": ["jelly"],
+      "th": { "vo": "ทุกโมเดลที่คุณจ่าย อยู่ในที่เดียว เลือกได้ตามงาน", "text": ["ทุกโมเดล", "One Picker"] },
+      "en": { "vo": "Every model you pay for, one picker. APIs, CLI logins, and Ollama local.", "text": ["Every model.", "One picker."] }
+    },
+    {
+      "id": "s05", "name": "Trust", "start": 31, "end": 39, "bots": ["nori"],
+      "th": { "vo": "ไฟล์ของคุณอยู่บนเครื่อง ไม่ส่ง telemetry อนุมัติทุกแอคชัน พลาดกด Undo ได้", "text": ["No Mali Server", "Undo ได้ · Built-in Git"] },
+      "en": { "vo": "Private by design. You approve every action. Undo anything.", "text": ["No telemetry.", "Full control. Undo."] }
+    },
+    {
+      "id": "s06", "name": "Power", "start": 39, "end": 47, "bots": ["petal"],
+      "th": { "vo": "ต่อ Gmail Notion Figma ได้ แถมสกิลงานไทย สร้าง Word ภาษาไทยเป๊ะ", "text": ["MCP +", "สกิลงานไทย"] },
+      "en": { "vo": "Plug in Gmail, Notion, Figma. Plus Thai work skills: quotations, official letters.", "text": ["MCP +", "Thai work templates"] }
+    },
+    {
+      "id": "s07", "name": "Speed", "start": 47, "end": 55, "bots": ["sora", "momo"],
+      "th": { "vo": "กด Command K เรียกทุกคำสั่ง เปิดมามีงานแนะนำ ทำเสร็จมีฉลอง", "text": ["⌘K · Smart suggest", "Completion!"] },
+      "en": { "vo": "Hit Command K for anything. Smart suggestions on empty. Celebration on done.", "text": ["⌘K · Smart", "Delight"] }
+    },
+    {
+      "id": "s08", "name": "Anywhere", "start": 55, "end": 63, "bots": ["sora"],
+      "th": { "vo": "อยู่แอปไหนก็เรียกมาลีได้ กดปุ่มเดียว สรุป แปล แคปจอ", "text": ["Mali Anywhere", "Hotkey เรียกได้ทุกแอป"] },
+      "en": { "vo": "Call Mali from any app. One hotkey to summarize, translate, or screenshot.", "text": ["Mali Anywhere", "One hotkey, every app"] }
+    },
+    {
+      "id": "s09", "name": "Inbox", "start": 63, "end": 71, "bots": ["petal"],
+      "th": { "vo": "สั่ง 3 งานพร้อมกัน ไปประชุมได้เลย กลับมาตรวจที่เดียว", "text": ["Task Inbox", "รันเบื้องหลังหลายงาน"] },
+      "en": { "vo": "Fire three Cowork jobs, go to your meeting. Review them all in one Inbox.", "text": ["Task Inbox", "Runs in the background"] }
+    },
+    {
+      "id": "s10", "name": "Proof", "start": 71, "end": 79, "bots": ["nori"],
+      "th": { "vo": "ทุกรอบมีใบเสร็จงาน หาไฟล์ที่เคยสร้างเจอ สรุปวีคนี้ประหยัดกี่ชั่วโมง", "text": ["Work Receipt", "Outputs · Weekly Recap"] },
+      "en": { "vo": "Every run has a receipt. All outputs in one gallery. And a weekly recap.", "text": ["Receipt.", "Gallery. Recap."] }
+    },
+    {
+      "id": "s11", "name": "Wow", "start": 79, "end": 86, "bots": ["nori", "mochi"],
+      "th": { "sayRate": 210, "vo": "สั่งงานเดียวเทียบ 2-3 AI แล้วเลือกที่ดีสุด พูดไทยได้ ใช้ภาษาไทยได้", "text": ["Agent Arena", "+ Thai-first"] },
+      "en": { "vo": "One task, two or three agents race. Pick the winner. Thai UI and voice.", "text": ["Agent Arena", "+ Thai-first"] }
+    },
+    {
+      "id": "s12", "name": "CTA", "start": 86, "end": 90, "voLead": 0.12, "voTail": 0.05, "bots": ["mochi", "jelly", "petal", "nori", "sora", "momo"],
+      "th": { "sayRate": 220, "vo": "โหลดเลย ไม่ต้องสมัคร ใส่คีย์ เริ่มโคเวิร์คกับทีมบอทวันนี้", "text": ["โหลดฟรี ไม่ต้องสมัคร", "เริ่มเลย!"] },
+      "en": { "sayRate": 200, "vo": "Download. Add keys. Start coworking. No account needed.", "text": ["Download free · No account", "Start!"] }
+    }
+  ],
+  "url": "malicowork.pndluke.com",
+  "verticalCut": [[7, 12], [80, 86], [86, 90]]
+}

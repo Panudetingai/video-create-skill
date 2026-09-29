@@ -1,0 +1,54 @@
+<!doctype html>
+<html lang="th">
+<head>
+  <meta charset="utf-8" />
+  <title>Vertical overlay</title>
+  <!-- 1080×1920 transparent overlay for the 9:16 cut: header + footer around the 16:9 video (y 600–1208). -->
+  <link rel="stylesheet" href="node_modules/@fontsource-variable/inter/index.css" />
+  <link rel="stylesheet" href="node_modules/@fontsource/sarabun/600.css" />
+  <link rel="stylesheet" href="node_modules/@fontsource/sarabun/800.css" />
+  <link rel="stylesheet" href="src/styles.css" />
+  <style>
+    html, body { background: transparent !important; width: 1080px; height: 1920px; overflow: hidden; }
+    .v-head { position: absolute; left: 0; right: 0; top: 150px; display: flex; flex-direction: column; align-items: center; gap: 22px; }
+    .v-head .logo { display: flex; align-items: center; gap: 22px; font: 800 96px 'Inter Variable', sans-serif; letter-spacing: -0.045em; color: #fff; }
+    .v-head .logo img { width: 110px; height: 110px; object-fit: contain; }
+    .v-head .tag { font: 700 52px var(--font-app); color: #fff; text-align: center; line-height: 1.25; }
+    .v-head .tag b { background: var(--rainbow); -webkit-background-clip: text; background-clip: text; color: transparent; }
+    .v-foot { position: absolute; left: 0; right: 0; top: 1330px; display: flex; flex-direction: column; align-items: center; gap: 30px; }
+    .v-foot .cta { font: 800 64px var(--font-app); color: #fff; }
+    .v-foot .row { display: flex; align-items: center; gap: 36px; }
+    .v-foot .qr { background: #fff; border-radius: 22px; padding: 16px; }
+    .v-foot .url { font: 700 40px 'Inter Variable', sans-serif; color: #fff; }
+    .v-foot .sub { font: 500 34px var(--font-app); color: rgba(255,255,255,.75); margin-top: 8px; }
+  </style>
+  <script src="node_modules/qrcode-generator/qrcode.js"></script>
+</head>
+<body>
+  <div class="v-head">
+    <div class="logo"><img src="src/assets/icon.png" alt="">Mali Cowork</div>
+    <div class="tag" id="tag"></div>
+  </div>
+  <div class="v-foot">
+    <div class="cta" id="cta"></div>
+    <div class="row"><div class="qr" id="qr"></div><div><div class="url" id="url"></div><div class="sub" id="sub"></div></div></div>
+  </div>
+  <script type="module">
+    import timeline from './src/timeline.json' with { type: 'json' };
+    const lang = new URLSearchParams(location.search).get('lang') || 'th';
+    document.documentElement.lang = lang;
+    const T = {
+      th: { tag: 'ทีมบอท AI <b>ที่รันบนเครื่องคุณ</b>', cta: 'โหลดฟรี · ไม่ต้องสมัคร', sub: 'macOS · Windows · Linux' },
+      en: { tag: 'Your AI team, <b>on your machine</b>', cta: 'Download free · No account', sub: 'macOS · Windows · Linux' },
+    }[lang];
+    document.getElementById('tag').innerHTML = T.tag;
+    document.getElementById('cta').textContent = T.cta;
+    document.getElementById('sub').textContent = T.sub;
+    document.getElementById('url').textContent = timeline.url;
+    const qr = qrcode(0, 'M'); qr.addData('https://' + timeline.url); qr.make();
+    const n = qr.getModuleCount(); let d = '';
+    for (let r = 0; r < n; r++) for (let c = 0; c < n; c++) if (qr.isDark(r, c)) d += `M${c} ${r}h1v1h-1z`;
+    document.getElementById('qr').innerHTML = `<svg width="200" height="200" viewBox="0 0 ${n} ${n}" shape-rendering="crispEdges"><path d="${d}" fill="#111"/></svg>`;
+  </script>
+</body>
+</html>

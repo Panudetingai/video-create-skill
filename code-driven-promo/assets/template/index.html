@@ -1,0 +1,35 @@
+<!doctype html>
+<html lang="th">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Mali Cowork Promo</title>
+  <link rel="icon" href="src/assets/icon.png" />
+  <!-- Fonts bundled locally (same families as the app: Inter + Sarabun; Mali for bot names) -->
+  <link rel="stylesheet" href="node_modules/@fontsource-variable/inter/index.css" />
+  <link rel="stylesheet" href="node_modules/@fontsource/sarabun/400.css" />
+  <link rel="stylesheet" href="node_modules/@fontsource/sarabun/500.css" />
+  <link rel="stylesheet" href="node_modules/@fontsource/sarabun/600.css" />
+  <link rel="stylesheet" href="node_modules/@fontsource/sarabun/700.css" />
+  <link rel="stylesheet" href="node_modules/@fontsource/sarabun/800.css" />
+  <link rel="stylesheet" href="node_modules/@fontsource/mali/700.css" />
+  <link rel="stylesheet" href="node_modules/@fontsource/jetbrains-mono/400.css" />
+  <link rel="stylesheet" href="node_modules/@fontsource/jetbrains-mono/500.css" />
+  <link rel="stylesheet" href="src/styles.css" />
+  <script type="importmap">
+    { "imports": { "three": "./node_modules/three/build/three.module.min.js" } }
+  </script>
+</head>
+<body>
+  <div id="viewport">
+    <div id="stage">
+      <canvas id="bg"></canvas>
+      <div id="scene"></div>
+      <div id="overlay"></div>
+    </div>
+  </div>
+  <div id="player" hidden></div>
+  <script src="node_modules/qrcode-generator/qrcode.js"></script>
+  <script type="module" src="src/main.js"></script>
+</body>
+</html>
